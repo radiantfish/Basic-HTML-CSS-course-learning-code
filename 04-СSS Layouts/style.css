@@ -27,7 +27,7 @@ body {
   padding-left: 40px;
   padding-right: 40px; */
   padding: 20px 40px;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   /* height: 80px; */
 }
 
@@ -36,9 +36,9 @@ nav {
   text-align: center;
 }
 
-article {
+/* article {
   margin-bottom: 60px;
-}
+} */
 
 .post-header {
   margin-bottom: 40px;
@@ -322,7 +322,8 @@ footer {
   font-weight: normal;
 }
 
-.row {
+/* FLEXBOX LAYOUT */
+/* .row {
   display: flex;
   align-items: flex-start;
   gap: 75px;
@@ -335,11 +336,23 @@ article {
 }
 
 aside {
-  /* 
+  
   DEFAULTS 
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  */
-  flex: 0 0 300px;
+    flex: 0 0 300px;
+}*/
+
+/* CSS GRID LAYOUT */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-self: start;
+}
+
+.main-header {
+  grid-column: 1 / -1;
 }
