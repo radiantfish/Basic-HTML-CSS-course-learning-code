@@ -26,6 +26,7 @@ Paragragh default: 1.6
 - Tints: 
 #FDF2E9
 #fae5d3
+#eb984e
 - Shades: 
 - Accents: 
 - Greys: 
@@ -34,6 +35,8 @@ Paragragh default: 1.6
 #333
 
 --- 05 SHADOWS
+box-shadow: 0 3.2rem 6.4em rgba(0, 0, 0, 0.06)
+box-shadow: 0 2.4rem 4.8em rgba(0, 0, 0, 0.075)
 
 --- 06 BORDER-RADIUS
 
