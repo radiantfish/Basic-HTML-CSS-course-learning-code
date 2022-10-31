@@ -1,64 +1,61 @@
-/*
+/* 
 --- 01 TYPOGRAPHY SYSTEM
 
-- Font sizes (px)
+- FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
-- Font weights
+- FONT-WEIGHTS: 
 Default: 400
 Medium: 500
 Semi-bold: 600
 Bold: 700
 
-- Line heights
+- LINE HEIGHTS: 
 Default: 1
 Small: 1.05
 Medium: 1.2
-Paragraph default: 1.6
+Paragragh default: 1.6
 
-- Letter spacing
+- LETTER SPACING
 -0.5px
 0.75px
 
 --- 02 COLORS
 
 - Primary: #e67e22
-- Tints:
-#fdf2e9
+- Tints: 
+#FDF2E9
 #fae5d3
 #eb984e
-
 - Shades: 
 #cf711f
 #45260a
-
-- Accents:
-- Greys
-
-#888
-#767676 (lightest grey allowed on #fff)
-#6f6f6f (lightest grey allowed on #fdf2e9)
+- Accents: 
+- Greys: 
+#888 
+#767676 lightest grey allowed on white
+#6f6f6f lightest grey allowed on #FDF2E9
 #555
 #333
 
 --- 05 SHADOWS
-
-0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+box-shadow: 0 3.2rem 6.4em rgba(0, 0, 0, 0.06)
+box-shadow: 0 2.4rem 4.8em rgba(0, 0, 0, 0.075)
 
 --- 06 BORDER-RADIUS
 
 Default: 9px
-Medium: 11px
 
 --- 07 WHITESPACE
 
-- Spacing system (px)
+- Spacing stystem (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
 */
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -76,23 +73,23 @@ body {
   color: #555;
 }
 
-/**************************/
-/* GENRAL REUSABLE COMPONENTS */
-/**************************/
+/***************************************/
+/* GENERAL REUSABLE COMPONENTS */
+/***************************************/
 
 .container {
   /* 1140px */
   max-width: 120rem;
-  padding: 0 3.2rem;
   margin: 0 auto;
+  padding: 0 3.2rem;
 }
 
 .grid {
   display: grid;
-  column-gap: 6.4rem;
   row-gap: 9.6rem;
-
-  /* margin-bottom: 9.6rem; */
+  column-gap: 6.4rem;
+  /* align-items: center;
+  justify-content: center; */
 }
 
 /* .grid:last-child {
@@ -128,8 +125,9 @@ body {
 .heading-tertiary {
   font-weight: 700;
   color: #333;
-  /* color: #45260a; */
+  /* color: #2e1907; */
   /* color: #343a40; */
+
   letter-spacing: -0.5px;
 }
 
@@ -146,7 +144,7 @@ body {
 }
 
 .heading-tertiary {
-  font-size: 3rem;
+  font-size: 3em;
   line-height: 1.2;
   margin-bottom: 3.2rem;
 }
@@ -168,17 +166,16 @@ body {
 
   text-decoration: none;
   font-size: 2rem;
-  font-weight: 600;
   padding: 1.6rem 3.2rem;
-  border-radius: 9px;
+  border-radius: 0.9rem;
+  font-weight: 600;
 
-  /* Only necessary for .btn */
+  /* Only for CTA button */
   border: none;
   cursor: pointer;
   font-family: inherit;
 
   /* Put transition on original "state" */
-  /* transition: background-color 0.3s; */
   transition: all 0.3s;
 }
 
@@ -188,8 +185,8 @@ body {
   color: #fff;
 }
 
-.btn--full:hover,
-.btn--full:active {
+.btn--full:active,
+.btn--full:hover {
   background-color: #cf711f;
 }
 
@@ -197,23 +194,20 @@ body {
 .btn--outline:visited {
   background-color: #fff;
   color: #555;
+  /* border: 3px solid white; */
+  box-shadow: inset 0 0 0 3px #fff;
 }
 
-.btn--outline:hover,
-.btn--outline:active {
+.btn--outline :active,
+.btn--outline:hover {
   background-color: #fdf2e9;
-
-  /* border: 3px solid #fff; */
-
-  /* Trick to add border inside */
-  box-shadow: inset 0 0 0 3px #fff;
 }
 
 .btn--form {
   background-color: #45260a;
   color: #fdf2e9;
-  align-self: end;
   padding: 1.2rem;
+  align-self: end;
 }
 
 .btn--form:hover {
@@ -257,14 +251,8 @@ body {
   color: #e67e22;
 }
 
-*:focus {
-  outline: none;
-  /* outline: 4px dotted #e67e22; */
-  /* outline-offset: 8px; */
-  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
-}
-
 /* HELPER/SETTINGS CLASSES */
+
 .margin-right-sm {
   margin-right: 1.6rem !important;
 }
@@ -279,4 +267,11 @@ body {
 
 strong {
   font-weight: 500;
+}
+
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #cf711f; */
+  /* outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
