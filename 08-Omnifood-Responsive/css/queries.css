@@ -120,6 +120,21 @@
   .btn--form {
     margin-top: 1.6rem;
   }
+
+  /***************************************/
+  /* MOBILE NAVIGATION */
+  /***************************************/
+
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav {
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 /* - FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
